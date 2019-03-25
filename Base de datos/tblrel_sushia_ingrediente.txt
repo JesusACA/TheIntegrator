@@ -1,0 +1,10 @@
+CREATE TABLE `rel_sushia_ingrediente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idSushiArmado` int(11) DEFAULT NULL,
+  `idIngrediente` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_rel_sushia_ingrediente_sushiArmado_idx` (`idSushiArmado`),
+  KEY `fk_rel_sushia_ingrediente_ingrediente_idx` (`idIngrediente`),
+  CONSTRAINT `fk_rel_sushia_ingrediente_ingrediente` FOREIGN KEY (`idIngrediente`) REFERENCES `ingrediente` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_rel_sushia_ingrediente_sushiArmado` FOREIGN KEY (`idSushiArmado`) REFERENCES `sushiarmado` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

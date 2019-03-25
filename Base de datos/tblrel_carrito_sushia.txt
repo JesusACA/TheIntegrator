@@ -1,0 +1,10 @@
+CREATE TABLE `rel_carrito_sushia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idCarrito` int(11) DEFAULT NULL,
+  `idSushiA` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_rel_carrito_sushia_sushia_idx` (`idSushiA`),
+  KEY `fk_rel_carrito_sushia_carrito_idx` (`idCarrito`),
+  CONSTRAINT `fk_rel_carrito_sushia_carrito` FOREIGN KEY (`idCarrito`) REFERENCES `carrito` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_rel_carrito_sushia_sushia` FOREIGN KEY (`idSushiA`) REFERENCES `sushiarmado` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

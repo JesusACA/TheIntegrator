@@ -1,0 +1,7 @@
+CREATE TABLE `ingrediente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `tipo` enum('PROTEINA','VEGETAL','EXTRA') DEFAULT NULL,
+  `precio` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

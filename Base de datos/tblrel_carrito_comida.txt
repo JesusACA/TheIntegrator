@@ -1,0 +1,10 @@
+CREATE TABLE `rel_carrito_comida` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idComida` int(11) DEFAULT NULL,
+  `idCarrito` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_rel_carrito_comida_comida_idx` (`idComida`),
+  KEY `fk_rel_carrito_comida_carrito_idx` (`idCarrito`),
+  CONSTRAINT `fk_rel_carrito_comida_carrito` FOREIGN KEY (`idCarrito`) REFERENCES `carrito` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_rel_carrito_comida_comida` FOREIGN KEY (`idComida`) REFERENCES `comida` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

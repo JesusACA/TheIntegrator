@@ -1,0 +1,5 @@
+CREATE TABLE `sushiarmado` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `precio` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

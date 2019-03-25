@@ -1,0 +1,9 @@
+CREATE TABLE `carrito` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `inUse` tinyint(4) DEFAULT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_carrito_usuario_idx` (`idUsuario`),
+  CONSTRAINT `FK_carrito_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

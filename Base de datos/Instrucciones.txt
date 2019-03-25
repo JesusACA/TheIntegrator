@@ -1,0 +1,1 @@
+borrar "tbl" y todo minuscula para crear las tablas, la base de datos se llama "sonroll"

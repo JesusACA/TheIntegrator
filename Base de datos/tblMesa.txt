@@ -1,0 +1,6 @@
+CREATE TABLE `mesa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `apartada` tinyint(4) DEFAULT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
