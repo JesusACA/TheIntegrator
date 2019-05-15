@@ -2,6 +2,7 @@ package com.example.gentlesoft.sonoraroll;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -11,9 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         ObjectAnimator animation;
         ObjectAnimator animation2;
         ObjectAnimator animationLa;
+        ObjectAnimator animationFL;
         AnimatorSet aS;
         int tamanio = metrics.heightPixels;
 
@@ -50,10 +53,23 @@ public class MainActivity extends AppCompatActivity {
         animation2.setDuration(2000);
         animationLa = ObjectAnimator.ofFloat(findViewById(R.id.lLET), View.ALPHA, 0.0f, 1.0f);
         animationLa.setDuration(2000);
+        animationFL = ObjectAnimator.ofFloat(findViewById(R.id.fLRegistro), View.ALPHA, 0.0f, 1.0f);
+        animationFL.setDuration(2000);
 
         aS = new AnimatorSet();
-        aS.playTogether(animation, animation2, animationLa);
+        aS.playTogether(animation, animation2, animationLa, animationFL);
         aS.start();
 
+        ((Button)findViewById(R.id.btnRegistro)).setOnClickListener(this);
+
+    }
+
+    public void onClick(final View v){
+        switch (v.getId()){
+            case R.id.btnRegistro:
+                Intent intent = new Intent(this, Registro.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
