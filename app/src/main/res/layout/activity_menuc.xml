@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <FrameLayout
+        android:id="@+id/layHamMenuC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_circular"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hamburguesas"
+            android:textSize="24dp"
+            android:layout_gravity="center|left"
+            />
+
+        <Button
+            android:id="@+id/btnHamMC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/rigthchervon"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/laySopaMenuC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_circular"
+        android:clickable="true"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sopas"
+            android:textSize="24dp"
+            android:layout_gravity="center|left"
+            />
+
+        <Button
+            android:id="@+id/btnSopaMC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/rigthchervon"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/laySushisMenuC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_circular"
+        android:clickable="true"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sushis"
+            android:textSize="24dp"
+            android:layout_gravity="center|left"
+            />
+
+        <Button
+            android:id="@+id/btnSushisMC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/rigthchervon"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layCalienteMenuC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_circular"
+        android:clickable="true"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cocina caliente"
+            android:textSize="24dp"
+            android:layout_gravity="center|left"
+            />
+
+        <Button
+            android:id="@+id/btnCalienteMC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/rigthchervon"/>
+
+    </FrameLayout>
+
+</LinearLayout>

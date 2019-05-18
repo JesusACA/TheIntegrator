@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AnimatorSet aS;
         int tamanio = metrics.heightPixels;
 
+        Intent intent = new Intent(this, menuc.class);
+        startActivity(intent);
+
         ImageView imgSon = findViewById(R.id.imagenSonora);
         imgSon.setY(tamanio);
         imgSon.setAlpha(0.0f);
